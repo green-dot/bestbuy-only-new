@@ -1,0 +1,32 @@
+{
+  "name": "BestBuy - Only New",
+  "version": "1.0",
+  "description": "Remove bestbuy items that are open box or referbished",
+  "permissions": ["declarativeContent"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts":[
+    {
+      "matches": ["https://*.bestbuy.ca/*"],
+      "js": ["content_script.js"]
+    }
+  ],
+  "page_action":{
+    "default_popup": "popup.html",
+    "default_icon":{
+      "16": "images/bb.png",
+      "32": "images/bb.png",
+      "48": "images/bb.png",
+      "128": "images/bb.png"
+    }
+  },
+  "icons": {
+    "16": "images/bb.png",
+    "32": "images/bb.png",
+    "48": "images/bb.png",
+    "128": "images/bb.png"
+},
+  "manifest_version": 2
+}
